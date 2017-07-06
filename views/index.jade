@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    h1= title
+    p Favorite Baseball Players
+
+    // Wrapper
+    #wrapper
+            
+        // USER INFO
+        #userInfo
+            h2 Player Info
+            p
+                strong Position:
+                |  <span id='userInfoAge'></span>
+                br
+                strong Batting Average:
+                |  <span id='userInfoGender'></span>
+                br
+                strong Hometown:
+                |  <span id='userInfoLocation'></span>
+
+        // /USER INFO
+
+        // USER LIST
+        h2 Player List
+        #userList
+            table
+                thead
+                    th Player Name
+                    th Team
+                    th Delete?
+                tbody
+        // /USER LIST
+        // ADD USER
+        h2 Add Player
+        #addUser
+            fieldset
+                input#inputUserName(type='text', placeholder='Player Name')
+                input#inputUserEmail(type='text', placeholder='Team')
+                input#inputUserAge(type='text', placeholder='Position')
+                input#inputUserLocation(type='text', placeholder='Hometown')
+                input#inputUserGender(type='text', placeholder='Batting Average')
+                button#btnAddUser Add Player
+        // /ADD USER
+
+    // /WRAPPER
